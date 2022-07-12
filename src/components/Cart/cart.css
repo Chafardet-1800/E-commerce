@@ -1,0 +1,38 @@
+.cart{
+    width: 100%;
+    padding-top: 10px;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--third-color);
+    margin-bottom: 40px;
+}
+
+.cart__row{
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.buttom__conrainer{
+    display: flex;
+    gap: 20px;
+}
+.cart__buttom{
+    padding: 5px;
+    font-size: 1,2rem;
+}
+
+.cart__main-text{
+    text-align: center;
+    width: 25%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-text__quantity{
+    text-align: center;
+    width: 50px;
+}

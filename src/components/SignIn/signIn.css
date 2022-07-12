@@ -1,0 +1,13 @@
+.SignIn{
+    width: min(70%, 400px);
+    margin: 60px auto;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.SignIn__text{
+    border: 1px solid rgb(30, 5, 94);
+    border-radius: 10px;
+    padding: 5px;
+}

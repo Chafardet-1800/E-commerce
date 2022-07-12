@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { setCartSlice } from '../../store/slices/cart.slice'
 import { getProductsGlobal } from '../../store/slices/products.slice'
 import getConfig from '../../utils/getConfigs'
 
@@ -22,8 +23,8 @@ const ProductInfoId = ({product}) => {
 
     axios.post(URL, addproduct, getConfig())
       .then(res => {
-        console.log(res.data)
-        dispatch(getProductsGlobal())
+        dispatch(setCartSlice())
+        
       })
       .catch(err => console.log(err.data))
   }

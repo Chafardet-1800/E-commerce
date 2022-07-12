@@ -1,8 +1,11 @@
 import React from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 import getConfig from '../../utils/getConfigs'
 
 const LitteCartOfPorduct = ({product}) => {
+
+  const navigate = useNavigate()
 
   const productObj = {
     id: product.id,
@@ -14,10 +17,14 @@ const LitteCartOfPorduct = ({product}) => {
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
   }
+
+  const goToProduct = () => {
+      navigate(`/products/${product.id}`)
+  }
   return (
     <article className='card-product__container'>
 
-      <header className='card-product__header'>
+      <header onClick={goToProduct} className='card-product__header'>
       <img 
            className='card-product__img-back' 
            src={product.productImgs[1]} 
